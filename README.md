@@ -20,9 +20,22 @@ The **Ticketing System is already built** (`../Appardas-Ticketing-Module`) and i
 | `wireframes/public/` | Public-face wireframes (landing, services, work, team, staff profile, about, contact, privacy). |
 | `wireframes/internal/` | Internal-face wireframes (login, dashboard, directory, digital ID manager, content, inquiries, settings). |
 
-## Viewing the wireframes
+## Running the Flask Backend
 
-Open `wireframes/index.html` in a browser. No build step is required — the pages use the Tailwind browser CDN and Google Fonts, so an internet connection is needed for styling.
+Run locally using Python:
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+Open **`http://127.0.0.1:5000`** in your browser. The root page directly renders the **Wireframe Gallery** with full iframe previews and instant navigation across both faces. Zero client-side JavaScript required.
+
+## Vercel Deployment
+
+Deploy directly to Vercel via Git:
+- **Runtime**: Python Serverless (`api/index.py` + `requirements.txt`).
+- **Routing**: `vercel.json` routes all requests to `api/index.py` while serving `/static/*` assets cleanly.
+
 
 ## At a glance
 
