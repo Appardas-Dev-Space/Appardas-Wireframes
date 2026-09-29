@@ -4,6 +4,22 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/public",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/public/",
+      "destination": "/public/index.html"
+    },
+    {
       "source": "/appardas-logo.png",
       "destination": "/appardas-logo.png"
     },
