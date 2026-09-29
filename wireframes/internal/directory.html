@@ -1,0 +1,179 @@
+<!doctype html>
+<!-- WIREFRAME — Internal Face · Staff Directory. Route: /internal/directory. Static HTML + Tailwind, no JS. See plan §7.3 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas hub — Directory</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone-100 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-[1600px] px-6 h-9 flex items-center justify-between">
+      <a href="../public/index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to index.html</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/internal/directory</span>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Wireframe Hub</a>
+        <span class="hidden sm:inline">Staff Directory</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1600px] flex">
+    <!-- Sidebar -->
+    <aside class="hidden md:flex w-64 shrink-0 flex-col bg-stone-900 text-stone-300 min-h-screen">
+      <div class="h-16 flex items-center gap-3 px-6 border-b border-white/10">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
+        <span class="font-display text-lg font-bold text-white tracking-tight lowercase">appardas <span class="font-normal text-stone-400">hub</span></span>
+      </div>
+      <nav class="flex-1 p-3 space-y-1 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Hub</a>
+        <a href="content.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
+        <a href="directory.html" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white"><span class="h-4 w-4 rounded bg-white/30"></span> Directory</a>
+        <a href="id-manager.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Digital IDs</a>
+        <a href="inquiries.html" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span><span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span></a>
+        <div class="pt-3 mt-3 border-t border-white/10">
+          <p class="px-3 pb-2 text-[10px] font-semibold uppercase tracking-widest text-stone-500">Modules</p>
+          <a href="#" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Ticketing</span><span class="text-stone-500">↗</span></a>
+        </div>
+        <a href="settings.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Settings</a>
+      </nav>
+      <div class="p-3 border-t border-white/10">
+        <div class="flex items-center gap-3 rounded-xl px-3 py-2">
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-500 text-white text-sm font-bold">SM</span>
+          <div class="min-w-0"><p class="truncate text-sm font-semibold text-white">Sarah Alvarez</p><p class="truncate text-xs text-stone-400">Scrum Master</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="flex-1 min-w-0">
+      <header class="h-16 bg-white border-b border-stone-200 flex items-center justify-between px-6">
+        <div class="flex items-center gap-3">
+          <img src="../appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
+          <h1 class="font-display text-lg font-bold">Staff Directory</h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="rounded-full bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition-colors">+ Add member</a>
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-stone-900 text-white text-sm font-bold">SM</span>
+        </div>
+      </header>
+
+      <main class="p-6 space-y-5">
+        <!-- Toolbar -->
+        <div class="flex flex-wrap items-center gap-3">
+          <input type="search" placeholder="Search by name, role, department…" class="w-full sm:w-80 rounded-xl border border-stone-300 px-4 py-2.5 text-sm focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/30" />
+          <select class="rounded-xl border border-stone-300 px-4 py-2.5 text-sm"><option>All departments</option><option>Engineering</option><option>Design</option><option>Delivery</option></select>
+          <select class="rounded-xl border border-stone-300 px-4 py-2.5 text-sm"><option>All statuses</option><option>Published</option><option>Draft</option><option>Retired</option></select>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-hidden rounded-2xl border border-stone-200 bg-white">
+          <table class="w-full text-sm">
+            <thead class="bg-stone-50 text-left text-xs uppercase tracking-wider text-stone-500">
+              <tr>
+                <th class="px-5 py-3 font-semibold">Member</th>
+                <th class="px-5 py-3 font-semibold">Role</th>
+                <th class="px-5 py-3 font-semibold hidden lg:table-cell">Department</th>
+                <th class="px-5 py-3 font-semibold">Public profile</th>
+                <th class="px-5 py-3 font-semibold hidden xl:table-cell">Last reviewed</th>
+                <th class="px-5 py-3 font-semibold text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100">
+              <tr class="hover:bg-stone-50/60">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">SA</span>
+                    <div><p class="font-semibold">Sarah Alvarez</p><p class="text-xs text-stone-500">sarah.a@appardas.example</p></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-stone-600">Lead Engineer</td>
+                <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Platform</td>
+                <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Published</span></td>
+                <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">2 days ago</td>
+                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+              </tr>
+              <tr class="hover:bg-stone-50/60">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">LM</span>
+                    <div><p class="font-semibold">Leo Martins</p><p class="text-xs text-stone-500">leo.m@appardas.example</p></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-stone-600">Product Designer</td>
+                <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Design</td>
+                <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700"><span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span> Pending consent</span></td>
+                <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">5 days ago</td>
+                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+              </tr>
+              <tr class="hover:bg-stone-50/60">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="grid place-items-center h-9 w-9 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">AK</span>
+                    <div><p class="font-semibold">Alex Kim</p><p class="text-xs text-stone-500">alex.k@appardas.example</p></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-stone-600">Full-Stack Developer</td>
+                <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Engineering</td>
+                <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Published</span></td>
+                <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">1 week ago</td>
+                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+              </tr>
+              <tr class="hover:bg-stone-50/60">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="grid place-items-center h-9 w-9 rounded-full bg-sky-100 text-sky-700 text-xs font-bold">MR</span>
+                    <div><p class="font-semibold">Maria Rossi</p><p class="text-xs text-stone-500">maria.r@appardas.example</p></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-stone-600">Delivery Lead</td>
+                <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Delivery</td>
+                <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-2.5 py-1 text-xs font-semibold text-stone-600"><span class="h-1.5 w-1.5 rounded-full bg-stone-400"></span> Draft</span></td>
+                <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">3 days ago</td>
+                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+              </tr>
+              <tr class="hover:bg-stone-50/60">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="grid place-items-center h-9 w-9 rounded-full bg-stone-200 text-stone-600 text-xs font-bold">TB</span>
+                    <div><p class="font-semibold text-stone-500">Tomas Berg</p><p class="text-xs text-stone-400">tomas.b@appardas.example</p></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-stone-500">Frontend Developer</td>
+                <td class="px-5 py-4 text-stone-500 hidden lg:table-cell">Engineering</td>
+                <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-2.5 py-1 text-xs font-semibold text-stone-500"><span class="h-1.5 w-1.5 rounded-full bg-stone-400"></span> Retired</span></td>
+                <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">2 months ago</td>
+                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex items-center justify-between border-t border-stone-200 px-5 py-3 text-xs text-stone-500">
+            <span>Showing 5 of 12 members</span>
+            <div class="flex gap-1">
+              <span class="rounded-md border border-stone-200 px-2 py-1">Prev</span>
+              <span class="rounded-md bg-stone-900 px-2 py-1 text-white">1</span>
+              <span class="rounded-md border border-stone-200 px-2 py-1">2</span>
+              <span class="rounded-md border border-stone-200 px-2 py-1">Next</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annotation -->
+        <div class="rounded-2xl border border-dashed border-stone-300 bg-white p-5 text-xs text-stone-500">
+          <span class="font-semibold text-stone-600">Internal-only data.</span> This table may show legal name, work contact,
+          employment dates, manager, and internal IDs. It is never exposed publicly — public output is controlled per field in
+          <a href="id-manager.html" class="font-semibold text-amber-700">Digital IDs</a>.
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

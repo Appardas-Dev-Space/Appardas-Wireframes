@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs & temp files
+*.log
+*.tmp
+.cache/
+
+# Vercel deployment cache
+.vercel
+
+# Node (if used later)
+node_modules/

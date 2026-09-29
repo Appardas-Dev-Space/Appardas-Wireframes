@@ -1,0 +1,98 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/wireframes/index.html"
+    },
+    {
+      "source": "/public",
+      "destination": "/wireframes/public/index.html"
+    },
+    {
+      "source": "/public/",
+      "destination": "/wireframes/public/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/wireframes/public/services.html"
+    },
+    {
+      "source": "/work",
+      "destination": "/wireframes/public/work.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/wireframes/public/about.html"
+    },
+    {
+      "source": "/team",
+      "destination": "/wireframes/public/team.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/wireframes/public/contact.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/wireframes/public/privacy.html"
+    },
+    {
+      "source": "/team/:slug",
+      "destination": "/wireframes/public/staff-profile.html"
+    },
+    {
+      "source": "/internal",
+      "destination": "/wireframes/internal/dashboard.html"
+    },
+    {
+      "source": "/internal/",
+      "destination": "/wireframes/internal/dashboard.html"
+    },
+    {
+      "source": "/internal/login",
+      "destination": "/wireframes/internal/login.html"
+    },
+    {
+      "source": "/internal/directory",
+      "destination": "/wireframes/internal/directory.html"
+    },
+    {
+      "source": "/internal/ids",
+      "destination": "/wireframes/internal/id-manager.html"
+    },
+    {
+      "source": "/internal/inquiries",
+      "destination": "/wireframes/internal/inquiries.html"
+    },
+    {
+      "source": "/internal/settings",
+      "destination": "/wireframes/internal/settings.html"
+    },
+    {
+      "source": "/internal/content",
+      "destination": "/wireframes/internal/content.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

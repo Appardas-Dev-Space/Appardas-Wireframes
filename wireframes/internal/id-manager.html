@@ -1,0 +1,247 @@
+<!doctype html>
+<!--
+  WIREFRAME — Internal Face · Digital ID Manager
+  Route: /internal/ids
+  The consent + publication control surface. See 00-RESEARCH-AND-PLAN.md §6 & §7.4.
+  Static HTML + Tailwind, no JS.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas hub — Digital IDs</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone-100 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-[1600px] px-6 h-9 flex items-center justify-between">
+      <a href="../public/index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to index.html</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/internal/ids</span>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Wireframe Hub</a>
+        <span class="hidden sm:inline">Digital ID Manager</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1600px] flex">
+    <!-- Sidebar -->
+    <aside class="hidden md:flex w-64 shrink-0 flex-col bg-stone-900 text-stone-300 min-h-screen">
+      <div class="h-16 flex items-center gap-3 px-6 border-b border-white/10">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
+        <span class="font-display text-lg font-bold text-white tracking-tight lowercase">appardas <span class="font-normal text-stone-400">hub</span></span>
+      </div>
+      <nav class="flex-1 p-3 space-y-1 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Hub</a>
+        <a href="content.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
+        <a href="directory.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Directory</a>
+        <a href="id-manager.html" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white"><span class="h-4 w-4 rounded bg-white/30"></span> Digital IDs</a>
+        <a href="inquiries.html" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span><span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span></a>
+        <div class="pt-3 mt-3 border-t border-white/10">
+          <p class="px-3 pb-2 text-[10px] font-semibold uppercase tracking-widest text-stone-500">Modules</p>
+          <a href="#" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Ticketing</span><span class="text-stone-500">↗</span></a>
+        </div>
+        <a href="settings.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Settings</a>
+      </nav>
+      <div class="p-3 border-t border-white/10">
+        <div class="flex items-center gap-3 rounded-xl px-3 py-2">
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-500 text-white text-sm font-bold">SM</span>
+          <div class="min-w-0"><p class="truncate text-sm font-semibold text-white">Sarah Alvarez</p><p class="truncate text-xs text-stone-400">Scrum Master</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="flex-1 min-w-0">
+      <header class="h-16 bg-white border-b border-stone-200 flex items-center justify-between px-6">
+        <div class="flex items-center gap-3">
+          <img src="../appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
+          <h1 class="font-display text-lg font-bold">Digital ID Manager</h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="rounded-full border border-stone-300 px-4 py-2 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">Preview public view</button>
+          <button class="rounded-full bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition-colors">Publish</button>
+        </div>
+      </header>
+
+      <main class="p-6">
+        <div class="grid gap-6 xl:grid-cols-12">
+
+          <!-- Left: profile list -->
+          <div class="xl:col-span-3 rounded-2xl border border-stone-200 bg-white">
+            <div class="flex items-center justify-between border-b border-stone-200 p-4">
+              <h2 class="font-display font-bold">Profiles</h2>
+              <span class="text-xs text-stone-500">12 total</span>
+            </div>
+            <ul class="divide-y divide-stone-100 text-sm">
+              <li class="bg-amber-50 border-l-4 border-amber-600 px-4 py-3">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-amber-900">Sarah Alvarez</p>
+                  <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">PUBLISHED</span>
+                </div>
+                <p class="text-xs text-amber-800/70">Lead Engineer</p>
+              </li>
+              <li class="px-4 py-3 hover:bg-stone-50">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">Leo Martins</p>
+                  <span class="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700">CONSENT</span>
+                </div>
+                <p class="text-xs text-stone-500">Product Designer</p>
+              </li>
+              <li class="px-4 py-3 hover:bg-stone-50">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">Alex Kim</p>
+                  <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">PUBLISHED</span>
+                </div>
+                <p class="text-xs text-stone-500">Full-Stack Developer</p>
+              </li>
+              <li class="px-4 py-3 hover:bg-stone-50">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold">Maria Rossi</p>
+                  <span class="rounded-full bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">DRAFT</span>
+                </div>
+                <p class="text-xs text-stone-500">Delivery Lead</p>
+              </li>
+              <li class="px-4 py-3 hover:bg-stone-50">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-stone-500">Tomas Berg</p>
+                  <span class="rounded-full bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-500">RETIRED</span>
+                </div>
+                <p class="text-xs text-stone-400">Former Frontend Developer</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Middle: field visibility + consent -->
+          <div class="xl:col-span-5 space-y-6">
+            <!-- Consent panel -->
+            <section class="rounded-2xl border border-stone-200 bg-white p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h2 class="font-display text-lg font-bold">Consent &amp; governance</h2>
+                  <p class="text-sm text-stone-500">Publication requires consent + approval.</p>
+                </div>
+                <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">Consent on file</span>
+              </div>
+              <dl class="mt-5 grid sm:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-xl bg-stone-50 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Consent given</dt>
+                  <dd class="mt-1 font-semibold">Yes · 12 Aug 2026</dd>
+                </div>
+                <div class="rounded-xl bg-stone-50 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Approved by</dt>
+                  <dd class="mt-1 font-semibold">SM · Jordan D.</dd>
+                </div>
+                <div class="rounded-xl bg-stone-50 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Last reviewed</dt>
+                  <dd class="mt-1 font-semibold">27 Sep 2026</dd>
+                </div>
+                <div class="rounded-xl bg-stone-50 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Status</dt>
+                  <dd class="mt-1 font-semibold text-emerald-600">Published</dd>
+                </div>
+              </dl>
+            </section>
+
+            <!-- Field visibility -->
+            <section class="rounded-2xl border border-stone-200 bg-white p-6">
+              <h2 class="font-display text-lg font-bold">Field visibility</h2>
+              <p class="text-sm text-stone-500">Toggle exactly what appears on the public profile.</p>
+
+              <div class="mt-5 space-y-3 text-sm">
+                <!-- public-always -->
+                <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                  <div><p class="font-semibold">Display name</p><p class="text-xs text-stone-500">Public · always</p></div>
+                  <span class="rounded-full bg-stone-900 px-3 py-1 text-xs font-semibold text-white">Public</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                  <div><p class="font-semibold">Role &amp; department</p><p class="text-xs text-stone-500">Public · always</p></div>
+                  <span class="rounded-full bg-stone-900 px-3 py-1 text-xs font-semibold text-white">Public</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                  <div><p class="font-semibold">Short bio</p><p class="text-xs text-stone-500">Public · reviewed</p></div>
+                  <span class="rounded-full bg-stone-900 px-3 py-1 text-xs font-semibold text-white">Public</span>
+                </div>
+                <!-- opt-in on -->
+                <div class="flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50/40 px-4 py-3">
+                  <div><p class="font-semibold">Work email</p><p class="text-xs text-emerald-700">Opt-in · ON</p></div>
+                  <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500"><span class="ml-auto mr-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50/40 px-4 py-3">
+                  <div><p class="font-semibold">Desk phone</p><p class="text-xs text-emerald-700">Opt-in · ON</p></div>
+                  <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500"><span class="ml-auto mr-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50/40 px-4 py-3">
+                  <div><p class="font-semibold">City</p><p class="text-xs text-emerald-700">Opt-in · ON</p></div>
+                  <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500"><span class="ml-auto mr-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+                </div>
+                <!-- opt-in off -->
+                <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                  <div><p class="font-semibold">Professional links</p><p class="text-xs text-stone-500">Opt-in · OFF</p></div>
+                  <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-stone-300"><span class="mr-auto ml-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+                </div>
+                <!-- never public -->
+                <div class="flex items-center justify-between rounded-xl border border-rose-200 bg-rose-50/40 px-4 py-3">
+                  <div><p class="font-semibold text-rose-800">Personal contact, employment dates, salary, IDs</p><p class="text-xs text-rose-600">Never publishable</p></div>
+                  <span class="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">Locked</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right: live preview -->
+          <div class="xl:col-span-4 space-y-6">
+            <section class="rounded-2xl border border-stone-200 bg-white p-6">
+              <div class="flex items-center justify-between">
+                <h2 class="font-display text-lg font-bold">Public preview</h2>
+                <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">/team/sarah-alvarez</span>
+              </div>
+              <div class="mt-5 rounded-2xl border border-stone-200 p-6">
+                <div class="flex items-center gap-4">
+                  <span class="grid place-items-center h-16 w-16 rounded-full bg-amber-100 text-amber-800 font-display text-xl font-bold">SA</span>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <p class="font-display text-lg font-bold">Sarah Alvarez</p>
+                      <img src="../appardas-logo.png" alt="" class="h-4 w-auto object-contain opacity-80" />
+                    </div>
+                    <p class="text-sm font-medium text-amber-700">Lead Engineer</p>
+                    <p class="text-xs text-stone-500">Platform · Madrid</p>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm text-stone-600">Builds resilient systems and mentors the engineering team.</p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-amber-50 px-2.5 py-1 font-medium text-amber-800">PostgreSQL</span>
+                  <span class="rounded-full bg-amber-50 px-2.5 py-1 font-medium text-amber-800">Observability</span>
+                </div>
+                <div class="mt-5 rounded-xl bg-amber-50 p-3 text-[11px] text-amber-900">Only approved fields are shown. Personal data is never sent to the browser.</div>
+              </div>
+              <div class="mt-4 flex gap-3">
+                <button class="flex-1 rounded-full bg-amber-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-amber-700 transition-colors">Publish changes</button>
+                <button class="flex-1 rounded-full border border-stone-300 px-4 py-2.5 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">Save draft</button>
+              </div>
+            </section>
+
+            <!-- Audit -->
+            <section class="rounded-2xl border border-stone-200 bg-white p-6">
+              <h2 class="font-display text-lg font-bold">Publication audit</h2>
+              <ul class="mt-4 space-y-3 text-xs text-stone-600">
+                <li class="flex justify-between gap-3"><span>Consent recorded</span><span class="text-stone-400">12 Aug 2026</span></li>
+                <li class="flex justify-between gap-3"><span>Approved by Jordan D.</span><span class="text-stone-400">13 Aug 2026</span></li>
+                <li class="flex justify-between gap-3"><span>Bio updated</span><span class="text-stone-400">27 Sep 2026</span></li>
+                <li class="flex justify-between gap-3"><span>Last published</span><span class="text-stone-400">27 Sep 2026</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

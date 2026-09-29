@@ -1,0 +1,98 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/public",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/public/",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/public/services.html"
+    },
+    {
+      "source": "/work",
+      "destination": "/public/work.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/public/about.html"
+    },
+    {
+      "source": "/team",
+      "destination": "/public/team.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/public/contact.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/public/privacy.html"
+    },
+    {
+      "source": "/team/:slug",
+      "destination": "/public/staff-profile.html"
+    },
+    {
+      "source": "/internal",
+      "destination": "/internal/dashboard.html"
+    },
+    {
+      "source": "/internal/",
+      "destination": "/internal/dashboard.html"
+    },
+    {
+      "source": "/internal/login",
+      "destination": "/internal/login.html"
+    },
+    {
+      "source": "/internal/directory",
+      "destination": "/internal/directory.html"
+    },
+    {
+      "source": "/internal/ids",
+      "destination": "/internal/id-manager.html"
+    },
+    {
+      "source": "/internal/inquiries",
+      "destination": "/internal/inquiries.html"
+    },
+    {
+      "source": "/internal/settings",
+      "destination": "/internal/settings.html"
+    },
+    {
+      "source": "/internal/content",
+      "destination": "/internal/content.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
