@@ -1,0 +1,225 @@
+<!doctype html>
+<!-- WIREFRAME — Public Face · Work / Case Studies. Route: /work. Static HTML + Tailwind, no JS. See plan §5.3 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas — Work</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}.grid-lines{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px}</style>
+</head>
+<body class="bg-white text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-7xl px-6 h-9 flex items-center justify-between">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to index.html</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/work</span>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Wireframe Hub</a>
+        <span class="hidden sm:inline">Work / Case Studies</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-stone-200">
+    <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" />
+        <span class="font-display text-xl font-bold tracking-tight lowercase">appardas</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <a href="index.html" class="hover:text-amber-700 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-amber-700 transition-colors">Services</a>
+        <a href="work.html" class="text-amber-700">Work</a>
+        <a href="team.html" class="hover:text-amber-700 transition-colors">Team</a>
+        <a href="about.html" class="hover:text-amber-700 transition-colors">About</a>
+        <a href="contact.html" class="hover:text-amber-700 transition-colors">Contact</a>
+      </nav>
+      <a href="contact.html" class="rounded-full bg-amber-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-700 transition-colors">Get in Touch</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-stone-50 border-b border-stone-200">
+      <div class="mx-auto max-w-7xl px-6 py-20 md:py-24">
+        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">Selected work</p>
+        <h1 class="font-display mt-4 max-w-3xl text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight">Digital solutions that make SMEs relevant.</h1>
+        <p class="mt-6 max-w-2xl text-lg text-stone-600">Explore real digital systems built for Small and Medium Enterprises—from neighborhood coffee shops and transient bookings to pet care services.</p>
+      </div>
+    </section>
+
+    <!-- Filters (static) -->
+    <section class="border-b border-stone-200 bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex flex-wrap gap-2 text-sm">
+        <a href="#" class="rounded-full bg-stone-900 px-4 py-2 font-semibold text-white">All Businesses</a>
+        <a href="#" class="rounded-full border border-stone-200 px-4 py-2 font-medium text-stone-600 hover:border-amber-300 hover:text-amber-700 transition-colors">Coffee Shop</a>
+        <a href="#" class="rounded-full border border-stone-200 px-4 py-2 font-medium text-stone-600 hover:border-amber-300 hover:text-amber-700 transition-colors">Transient and Bookings</a>
+        <a href="#" class="rounded-full border border-stone-200 px-4 py-2 font-medium text-stone-600 hover:border-amber-300 hover:text-amber-700 transition-colors">Pet Shop Services</a>
+      </div>
+    </section>
+
+    <!-- Case study grid -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-2">
+        <!-- Business 01: Coffee Shop -->
+        <article class="group rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all bg-white flex flex-col justify-between">
+          <div>
+            <div class="h-56 bg-amber-700 grid-lines p-8 flex flex-col justify-between text-white relative">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-black/25 backdrop-blur px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-200">Coffee Shop</span>
+                <span class="text-xs font-mono text-amber-200/80">Case Study 01</span>
+              </div>
+              <h2 class="font-display text-3xl font-bold tracking-tight text-white">business_n 01</h2>
+            </div>
+            <div class="p-8">
+              <span class="text-xs font-semibold uppercase tracking-widest text-amber-700">Digital Ordering &amp; Customer Loyalty</span>
+              <p class="mt-3 text-stone-600 leading-relaxed">Transformed a busy neighborhood specialty cafe into a seamless digital destination. Replaced paper tickets with instant digital menu ordering, live queue tracking, and customer loyalty rewards that turned first-time visitors into daily regulars.</p>
+              
+              <ul class="mt-6 space-y-2 text-xs text-stone-600 border-t border-stone-100 pt-4">
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Contactless digital ordering &amp; custom modifier options</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Real-time kitchen queue &amp; order-ready notifications</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Digital loyalty stamp wallet with zero app install needed</li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-8 pb-8 pt-2">
+            <div class="grid grid-cols-2 gap-4 border-t border-stone-100 pt-6">
+              <div><p class="font-display text-2xl font-bold text-amber-700">+42%</p><p class="text-xs text-stone-500">repeat orders</p></div>
+              <div><p class="font-display text-2xl font-bold text-stone-900">3.5m</p><p class="text-xs text-stone-500">average ordering speed</p></div>
+            </div>
+            <span class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Explore business_n 01 case study →</span>
+          </div>
+        </article>
+
+        <!-- Business 02: Transient and Bookings -->
+        <article class="group rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all bg-white flex flex-col justify-between">
+          <div>
+            <div class="h-56 bg-stone-900 grid-lines p-8 flex flex-col justify-between text-white relative">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-white/10 backdrop-blur px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-300">Transient and Bookings</span>
+                <span class="text-xs font-mono text-stone-400">Case Study 02</span>
+              </div>
+              <h2 class="font-display text-3xl font-bold tracking-tight text-white">business_n 02</h2>
+            </div>
+            <div class="p-8">
+              <span class="text-xs font-semibold uppercase tracking-widest text-amber-700">Direct Reservation &amp; Host Hub</span>
+              <p class="mt-3 text-stone-600 leading-relaxed">Built a dedicated direct booking portal for a boutique transient house and short-stay operator. Eliminated heavy third-party OTA commissions with real-time calendar availability, instant reservation confirmation, and automated guest onboarding.</p>
+              
+              <ul class="mt-6 space-y-2 text-xs text-stone-600 border-t border-stone-100 pt-4">
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Direct inquiry dispatch &amp; instant booking calendar</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Automated guest check-in guide &amp; secure door code delivery</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Zero third-party booking commissions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-8 pb-8 pt-2">
+            <div class="grid grid-cols-2 gap-4 border-t border-stone-100 pt-6">
+              <div><p class="font-display text-2xl font-bold text-amber-700">100%</p><p class="text-xs text-stone-500">direct bookings</p></div>
+              <div><p class="font-display text-2xl font-bold text-stone-900">Zero</p><p class="text-xs text-stone-500">commission fees</p></div>
+            </div>
+            <span class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Explore business_n 02 case study →</span>
+          </div>
+        </article>
+
+        <!-- Business 03: Pet Shop Services -->
+        <article class="group rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all bg-white flex flex-col justify-between">
+          <div>
+            <div class="h-56 bg-amber-600 grid-lines p-8 flex flex-col justify-between text-white relative">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-black/20 backdrop-blur px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-100">Pet Shop Services</span>
+                <span class="text-xs font-mono text-amber-100/80">Case Study 03</span>
+              </div>
+              <h2 class="font-display text-3xl font-bold tracking-tight text-white">business_n 03</h2>
+            </div>
+            <div class="p-8">
+              <span class="text-xs font-semibold uppercase tracking-widest text-amber-700">Pet Grooming &amp; Supplies Management</span>
+              <p class="mt-3 text-stone-600 leading-relaxed">Streamlined operations for a full-service pet care store and salon. Replaced messy phone messaging with an automated grooming scheduler, complete pet supply catalog, and automatic vaccination and appointment reminders.</p>
+              
+              <ul class="mt-6 space-y-2 text-xs text-stone-600 border-t border-stone-100 pt-4">
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Self-service groomer booking with breed-specific slots</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Pet supply catalog with pickup reservations</li>
+                <li class="flex items-center gap-2"><span class="text-amber-700 font-bold">✓</span> Automated reminder messages reducing salon no-shows</li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-8 pb-8 pt-2">
+            <div class="grid grid-cols-2 gap-4 border-t border-stone-100 pt-6">
+              <div><p class="font-display text-2xl font-bold text-amber-700">+85%</p><p class="text-xs text-stone-500">booked slots</p></div>
+              <div><p class="font-display text-2xl font-bold text-stone-900">4.9★</p><p class="text-xs text-stone-500">client satisfaction</p></div>
+            </div>
+            <span class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Explore business_n 03 case study →</span>
+          </div>
+        </article>
+
+        <!-- Your Business Next Card -->
+        <article class="group rounded-3xl overflow-hidden border-2 border-dashed border-amber-300 bg-amber-50/40 p-8 flex flex-col justify-between hover:border-amber-500 transition-all">
+          <div>
+            <div class="h-12 w-12 rounded-2xl bg-amber-600 text-white grid place-items-center font-display font-bold text-xl">✦</div>
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-widest text-amber-700">Your Business Opportunity</span>
+            <h2 class="font-display mt-2 text-3xl font-bold tracking-tight text-stone-900">Your SME could be next.</h2>
+            <p class="mt-4 text-stone-600 leading-relaxed">Whether you run a clinic, culinary brand, retail shop, or trade service, we take care of your digital presence end-to-end so you can focus on running your business.</p>
+            
+            <div class="mt-8 space-y-3 text-sm text-stone-700">
+              <div class="flex items-center gap-3"><span class="text-amber-700 font-bold">✓</span> Zero technical expertise needed from you</div>
+              <div class="flex items-center gap-3"><span class="text-amber-700 font-bold">✓</span> Professional design tailored to your brand story</div>
+              <div class="flex items-center gap-3"><span class="text-amber-700 font-bold">✓</span> Direct customer engagement &amp; increased revenue</div>
+            </div>
+          </div>
+
+          <div class="mt-10 border-t border-amber-200/60 pt-6">
+            <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-700 transition-colors shadow-sm">
+              Start Your Project With appardas →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-stone-900 py-20 relative overflow-hidden">
+      <div class="relative mx-auto max-w-4xl px-6 text-center text-white">
+        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Your project could be next.</h2>
+        <p class="mt-4 text-lg text-stone-300">Tell us what you're building and where it hurts.</p>
+        <a href="contact.html" class="mt-8 inline-flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-500 transition-colors">Start a Project →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-950 text-stone-400">
+    <div class="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2.5 text-white">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-8 w-auto object-contain brightness-110" />
+        <span class="font-display text-xl font-bold tracking-tight text-white lowercase">appardas</span>
+      </div>
+        <p class="mt-4 text-sm leading-relaxed">Digital products built with senior craft and honest process.</p>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Company</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="about.html" class="hover:text-white">About</a></li><li><a href="work.html" class="hover:text-white">Work</a></li><li><a href="team.html" class="hover:text-white">Team</a></li></ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Services</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="services.html#digital-solutions" class="hover:text-white">Website Design &amp; Digital Build</a></li><li><a href="services.html#endpoint-services" class="hover:text-white">Endpoint &amp; ERP Automation</a></li><li><a href="services.html#useful-apps" class="hover:text-white">Useful Apps</a></li></ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Contact</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="contact.html" class="hover:text-white">hello@appardas.example</a></li><li><a href="contact.html" class="hover:text-white">Start a Project</a></li><li><a href="privacy.html" class="hover:text-white">Privacy Notice</a></li></ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <p>© 2026 appardas. All rights reserved.</p>
+        <div class="flex gap-5"><a href="privacy.html" class="hover:text-white">Privacy</a><a href="privacy.html" class="hover:text-white">Terms</a><a href="../index.html" class="hover:text-white">Wireframe index</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

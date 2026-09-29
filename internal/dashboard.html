@@ -1,0 +1,201 @@
+<!doctype html>
+<!-- WIREFRAME — Internal Face · Hub Dashboard. Route: /internal. Static HTML + Tailwind, no JS. See plan §7.2 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas hub — Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone-100 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-[1600px] px-6 h-9 flex items-center justify-between">
+      <a href="../public/index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to index.html</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/internal</span>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Wireframe Hub</a>
+        <span class="hidden sm:inline">Hub Dashboard</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1600px] flex">
+
+    <!-- Sidebar -->
+    <aside class="hidden md:flex w-64 shrink-0 flex-col bg-stone-900 text-stone-300 min-h-screen">
+      <div class="h-16 flex items-center gap-3 px-6 border-b border-white/10">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
+        <span class="font-display text-lg font-bold text-white tracking-tight lowercase">appardas <span class="font-normal text-stone-400">hub</span></span>
+      </div>
+      <nav class="flex-1 p-3 space-y-1 text-sm">
+        <a href="dashboard.html" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white">
+          <span class="h-4 w-4 rounded bg-white/30"></span> Hub
+        </a>
+        <a href="content.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
+        <a href="directory.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Directory</a>
+        <a href="id-manager.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Digital IDs</a>
+        <a href="inquiries.html" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors">
+          <span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span>
+          <span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span>
+        </a>
+        <div class="pt-3 mt-3 border-t border-white/10">
+          <p class="px-3 pb-2 text-[10px] font-semibold uppercase tracking-widest text-stone-500">Modules</p>
+          <a href="#" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors">
+            <span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Ticketing</span>
+            <span class="text-stone-500" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <a href="settings.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Settings</a>
+      </nav>
+      <div class="p-3 border-t border-white/10">
+        <div class="flex items-center gap-3 rounded-xl px-3 py-2">
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-500 text-white text-sm font-bold">SM</span>
+          <div class="min-w-0">
+            <p class="truncate text-sm font-semibold text-white">Sarah Alvarez</p>
+            <p class="truncate text-xs text-stone-400">Scrum Master</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="flex-1 min-w-0">
+      <!-- Top bar -->
+      <header class="h-16 bg-white border-b border-stone-200 flex items-center justify-between px-6">
+        <div class="flex items-center gap-3">
+          <img src="../appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
+          <h1 class="font-display text-lg font-bold">Hub Dashboard</h1>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> All systems operational
+          </span>
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-stone-900 text-white text-sm font-bold">SM</span>
+        </div>
+      </header>
+
+      <main class="p-6 space-y-6">
+        <!-- Welcome -->
+        <div class="rounded-3xl bg-stone-900 text-white p-8 relative overflow-hidden">
+          <div class="relative">
+            <p class="text-xs font-semibold uppercase tracking-widest text-amber-300">Welcome back</p>
+            <h2 class="font-display mt-2 text-3xl font-bold tracking-tight">Good morning, Sarah.</h2>
+            <p class="mt-2 text-stone-300">You have 2 profiles awaiting approval and 3 new inquiries.</p>
+          </div>
+        </div>
+
+        <!-- KPI cards -->
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">New inquiries</p>
+            <p class="font-display mt-2 text-3xl font-bold">3</p>
+            <p class="mt-1 text-xs text-emerald-600">+2 today</p>
+          </div>
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Profiles pending consent</p>
+            <p class="font-display mt-2 text-3xl font-bold">2</p>
+            <p class="mt-1 text-xs text-amber-600">Needs review</p>
+          </div>
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Content drafts</p>
+            <p class="font-display mt-2 text-3xl font-bold">1</p>
+            <p class="mt-1 text-xs text-stone-500">Last edit 2h ago</p>
+          </div>
+          <div class="rounded-2xl border border-stone-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Open tickets</p>
+            <p class="font-display mt-2 text-3xl font-bold">14</p>
+            <p class="mt-1 text-xs text-stone-500">Via Ticketing module</p>
+          </div>
+        </div>
+
+        <!-- Module launcher -->
+        <div>
+          <h3 class="font-display text-lg font-bold">Modules</h3>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+            <a href="content.html" class="group rounded-2xl border border-stone-200 bg-white p-6 hover:border-amber-300 hover:shadow-sm transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-sky-500 text-white font-black">✦</span>
+              <h4 class="font-display mt-4 text-lg font-bold">Public Content</h4>
+              <p class="mt-1 text-sm text-stone-600">Edit landing, services, and about copy.</p>
+            </a>
+
+            <a href="directory.html" class="group rounded-2xl border border-stone-200 bg-white p-6 hover:border-amber-300 hover:shadow-sm transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-amber-600 text-white font-black">≡</span>
+              <h4 class="font-display mt-4 text-lg font-bold">Staff Directory</h4>
+              <p class="mt-1 text-sm text-stone-600">All team members and internal records.</p>
+            </a>
+
+            <a href="id-manager.html" class="group rounded-2xl border border-stone-200 bg-white p-6 hover:border-amber-300 hover:shadow-sm transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-amber-400 text-stone-900 font-black">ID</span>
+              <h4 class="font-display mt-4 text-lg font-bold">Digital IDs</h4>
+              <p class="mt-1 text-sm text-stone-600">Control public/private fields and consent.</p>
+            </a>
+
+            <a href="inquiries.html" class="group rounded-2xl border border-stone-200 bg-white p-6 hover:border-amber-300 hover:shadow-sm transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-emerald-500 text-white font-black">✉</span>
+              <h4 class="font-display mt-4 text-lg font-bold">Inquiries</h4>
+              <p class="mt-1 text-sm text-stone-600">Review and respond to contact submissions.</p>
+            </a>
+
+            <a href="settings.html" class="group rounded-2xl border border-stone-200 bg-white p-6 hover:border-amber-300 hover:shadow-sm transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-stone-900 text-white font-black">⚙</span>
+              <h4 class="font-display mt-4 text-lg font-bold">Settings</h4>
+              <p class="mt-1 text-sm text-stone-600">Your profile, password, and preferences.</p>
+            </a>
+
+            <a href="#" class="group rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-6 hover:bg-amber-100 transition-all">
+              <span class="grid place-items-center h-11 w-11 rounded-xl bg-white text-amber-700 font-black">↗</span>
+              <h4 class="font-display mt-4 text-lg font-bold text-amber-800">Ticketing</h4>
+              <p class="mt-1 text-sm text-amber-700">Open the existing ticketing system.</p>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <!-- Recent activity -->
+          <div class="lg:col-span-2 rounded-2xl border border-stone-200 bg-white p-6">
+            <h3 class="font-display text-lg font-bold">Recent activity</h3>
+            <ul class="mt-4 divide-y divide-stone-100 text-sm">
+              <li class="flex items-center gap-4 py-3">
+                <span class="grid place-items-center h-8 w-8 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">JD</span>
+                <p class="flex-1 text-stone-600"><span class="font-semibold text-stone-900">Jordan</span> published a staff profile</p>
+                <span class="text-xs text-stone-400">12m ago</span>
+              </li>
+              <li class="flex items-center gap-4 py-3">
+                <span class="grid place-items-center h-8 w-8 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">LM</span>
+                <p class="flex-1 text-stone-600"><span class="font-semibold text-stone-900">Leo</span> updated the Services page draft</p>
+                <span class="text-xs text-stone-400">2h ago</span>
+              </li>
+              <li class="flex items-center gap-4 py-3">
+                <span class="grid place-items-center h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">MR</span>
+                <p class="flex-1 text-stone-600"><span class="font-semibold text-stone-900">Maria</span> closed an inquiry</p>
+                <span class="text-xs text-stone-400">4h ago</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Alerts -->
+          <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+            <h3 class="font-display text-lg font-bold text-amber-900">Needs attention</h3>
+            <ul class="mt-4 space-y-3 text-sm text-amber-900">
+              <li class="flex items-start gap-2"><span>•</span> 2 profiles awaiting consent approval</li>
+              <li class="flex items-start gap-2"><span>•</span> 1 content draft not yet published</li>
+              <li class="flex items-start gap-2"><span>•</span> 3 unread inquiries</li>
+            </ul>
+            <a href="id-manager.html" class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-amber-900 hover:text-amber-950">Review profiles →</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

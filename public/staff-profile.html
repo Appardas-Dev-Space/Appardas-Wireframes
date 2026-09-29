@@ -1,0 +1,234 @@
+<!doctype html>
+<!--
+  WIREFRAME — Public Face · Staff Digital ID (detail)
+  Route: /team/[slug]
+  PRIVACY-CRITICAL: this page renders ONLY public-safe fields.
+  See 00-RESEARCH-AND-PLAN.md §5.5 and §6.
+  Static HTML + Tailwind, no JS.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas — Staff Profile</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-7xl px-6 h-9 flex items-center justify-between">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to index.html</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/team/[slug]</span>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Wireframe Hub</a>
+        <span class="hidden sm:inline">Staff Digital ID</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-stone-200">
+    <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" />
+        <span class="font-display text-xl font-bold tracking-tight lowercase">appardas</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <a href="index.html" class="hover:text-amber-700 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-amber-700 transition-colors">Services</a>
+        <a href="work.html" class="hover:text-amber-700 transition-colors">Work</a>
+        <a href="team.html" class="text-amber-700">Team</a>
+        <a href="about.html" class="hover:text-amber-700 transition-colors">About</a>
+        <a href="contact.html" class="hover:text-amber-700 transition-colors">Contact</a>
+      </nav>
+      <a href="contact.html" class="rounded-full bg-amber-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-700 transition-colors">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-6 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-stone-500">
+      <a href="team.html" class="hover:text-amber-700">Team</a>
+      <span class="mx-2">/</span>
+      <span class="text-stone-700">Sarah A.</span>
+    </nav>
+
+    <div class="mt-8 grid lg:grid-cols-3 gap-8">
+
+      <!-- ── Main identity column ─────────────────────────────────────────── -->
+      <div class="lg:col-span-2 space-y-8">
+
+        <!-- 1. Identity header -->
+        <section class="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+          <div class="flex flex-wrap items-start gap-6">
+            <span class="grid place-items-center h-24 w-24 rounded-full bg-amber-100 text-amber-800 font-display text-3xl font-bold">SA</span>
+            <div class="flex-1 min-w-[220px]">
+              <div class="flex flex-wrap items-center gap-3">
+                <h1 class="font-display text-3xl font-bold tracking-tight">Sarah Alvarez</h1>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Available
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 border border-stone-200 px-3 py-1 text-xs font-medium text-stone-700">
+                  <img src="../appardas-logo.png" alt="" class="h-3.5 w-auto object-contain" />
+                  <span>Verified ID · appardas</span>
+                </span>
+              </div>
+              <p class="mt-1 text-lg font-medium text-amber-700">Lead Engineer</p>
+              <p class="text-sm text-stone-500">Platform & Infrastructure · Madrid, Spain</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="#" class="rounded-full bg-stone-900 px-4 py-2 text-sm font-semibold text-white hover:bg-stone-800 transition-colors">Contact via form</a>
+                <a href="#" class="rounded-full border border-stone-200 px-4 py-2 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">LinkedIn</a>
+                <a href="#" class="rounded-full border border-stone-200 px-4 py-2 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. About (public bio) -->
+        <section class="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+          <h2 class="font-display text-xl font-bold">About</h2>
+          <p class="mt-3 leading-relaxed text-stone-700">
+            Sarah leads appardas' platform practice. Over a decade she has built data-heavy
+            systems for fintech and logistics teams, with a focus on reliability, clear
+            architecture, and mentoring engineers who care about craft. She writes and speaks
+            about pragmatic infrastructure at scale.
+          </p>
+        </section>
+
+        <!-- 3. Focus areas -->
+        <section class="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+          <h2 class="font-display text-xl font-bold">Focus areas</h2>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">Platform Architecture</span>
+            <span class="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">Data Architecture</span>
+            <span class="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">Observability</span>
+            <span class="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">Team Mentoring</span>
+            <span class="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">CI/CD</span>
+          </div>
+        </section>
+
+        <!-- 4. Privacy note -->
+        <section class="rounded-3xl border border-amber-200 bg-amber-50 p-6">
+          <p class="text-sm text-amber-900">
+            <strong>Why you see this.</strong> This profile displays only work information that
+            Sarah has approved for public viewing. Some fields are optional and hidden by her choice.
+            <a href="privacy.html" class="font-semibold underline underline-offset-4">Read our privacy notice</a> ·
+            <a href="contact.html" class="font-semibold underline underline-offset-4">Request a correction</a>
+          </p>
+        </section>
+      </div>
+
+      <!-- ── Side column ──────────────────────────────────────────────────── -->
+      <aside class="space-y-8">
+
+        <!-- Work contact -->
+        <section class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+          <h2 class="font-display text-lg font-bold">Work contact</h2>
+          <dl class="mt-4 space-y-4 text-sm">
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Work email</dt>
+              <dd class="mt-1 text-stone-700">sarah.a@appardas.example <span class="text-xs text-stone-400">(public)</span></dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Desk phone</dt>
+              <dd class="mt-1 text-stone-700">+34 900 000 000 <span class="text-xs text-stone-400">(public)</span></dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-stone-400">Location</dt>
+              <dd class="mt-1 text-stone-700">Madrid, Spain <span class="text-xs text-stone-400">(city only)</span></dd>
+            </div>
+          </dl>
+          <a href="contact.html" class="mt-5 block rounded-full bg-amber-600 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-amber-700 transition-colors">Send a message</a>
+        </section>
+
+        <!-- Professional links -->
+        <section class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+          <h2 class="font-display text-lg font-bold">Elsewhere</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="#" class="flex items-center justify-between text-stone-700 hover:text-amber-700"><span>LinkedIn</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="#" class="flex items-center justify-between text-stone-700 hover:text-amber-700"><span>GitHub</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="#" class="flex items-center justify-between text-stone-700 hover:text-amber-700"><span>Personal site</span><span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </section>
+
+        <!-- Developer annotation: field exposure -->
+        <section class="rounded-3xl border border-dashed border-stone-300 bg-white p-6">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Wireframe annotation</p>
+          <p class="mt-2 text-xs font-semibold text-stone-600">Fields rendered on this page (public tier only):</p>
+          <ul class="mt-2 space-y-1 text-xs text-stone-500">
+            <li>✓ displayName, avatar, roleTitle, department</li>
+            <li>✓ shortBio, skills[], profileStatus</li>
+            <li>✓ locationCity, workEmail*, workPhone* <span class="text-stone-400">(*opt-in)</span></li>
+            <li>✓ professional links* <span class="text-stone-400">(*opt-in)</span></li>
+            <li class="text-rose-500">✗ legalName, personal contact, employment dates, manager, internalId</li>
+            <li class="text-rose-500">✗ salary, home address, government ID, HR notes</li>
+          </ul>
+          <p class="mt-3 text-[11px] text-stone-400">Enforced server-side — never sent to the browser.</p>
+        </section>
+      </aside>
+    </div>
+
+    <!-- Related team -->
+    <section class="mt-16">
+      <div class="flex items-end justify-between">
+        <h2 class="font-display text-2xl font-bold tracking-tight">More of the team</h2>
+        <a href="team.html" class="text-sm font-semibold text-amber-700 hover:text-amber-800">View all →</a>
+      </div>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="staff-profile.html" class="rounded-2xl border border-stone-200 bg-white p-5 text-center hover:border-amber-300 transition-colors">
+          <span class="mx-auto grid place-items-center h-14 w-14 rounded-full bg-amber-100 text-amber-700 font-display font-bold">LM</span>
+          <p class="mt-3 font-semibold">Leo M.</p><p class="text-xs text-stone-500">Product Designer</p>
+        </a>
+        <a href="staff-profile.html" class="rounded-2xl border border-stone-200 bg-white p-5 text-center hover:border-amber-300 transition-colors">
+          <span class="mx-auto grid place-items-center h-14 w-14 rounded-full bg-emerald-100 text-emerald-700 font-display font-bold">AK</span>
+          <p class="mt-3 font-semibold">Alex K.</p><p class="text-xs text-stone-500">Full-Stack Developer</p>
+        </a>
+        <a href="staff-profile.html" class="rounded-2xl border border-stone-200 bg-white p-5 text-center hover:border-amber-300 transition-colors">
+          <span class="mx-auto grid place-items-center h-14 w-14 rounded-full bg-sky-100 text-sky-700 font-display font-bold">MR</span>
+          <p class="mt-3 font-semibold">Maria R.</p><p class="text-xs text-stone-500">Delivery Lead</p>
+        </a>
+        <a href="staff-profile.html" class="rounded-2xl border border-stone-200 bg-white p-5 text-center hover:border-amber-300 transition-colors">
+          <span class="mx-auto grid place-items-center h-14 w-14 rounded-full bg-amber-100 text-amber-800 font-display font-bold">JD</span>
+          <p class="mt-3 font-semibold">Jordan D.</p><p class="text-xs text-stone-500">Engineering Manager</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-16 bg-stone-950 text-stone-400">
+    <div class="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2.5 text-white">
+        <img src="../appardas-logo.png" alt="appardas logo" class="h-8 w-auto object-contain brightness-110" />
+        <span class="font-display text-xl font-bold tracking-tight text-white lowercase">appardas</span>
+      </div>
+        <p class="mt-4 text-sm leading-relaxed">Digital products built with senior craft and honest process.</p>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Company</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="about.html" class="hover:text-white">About</a></li><li><a href="work.html" class="hover:text-white">Work</a></li><li><a href="team.html" class="hover:text-white">Team</a></li></ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Services</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="services.html#digital-solutions" class="hover:text-white">Website Design &amp; Digital Build</a></li><li><a href="services.html#endpoint-services" class="hover:text-white">Endpoint &amp; ERP Automation</a></li><li><a href="services.html#useful-apps" class="hover:text-white">Useful Apps</a></li></ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Contact</p>
+        <ul class="mt-4 space-y-2 text-sm"><li><a href="contact.html" class="hover:text-white">hello@appardas.example</a></li><li><a href="contact.html" class="hover:text-white">Start a Project</a></li><li><a href="privacy.html" class="hover:text-white">Privacy Notice</a></li></ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <p>© 2026 appardas. All rights reserved.</p>
+        <div class="flex gap-5"><a href="privacy.html" class="hover:text-white">Privacy</a><a href="privacy.html" class="hover:text-white">Terms</a><a href="../index.html" class="hover:text-white">Wireframe index</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

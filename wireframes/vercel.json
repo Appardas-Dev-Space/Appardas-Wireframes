@@ -1,22 +1,42 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/",
+      "source": "/appardas-logo.png",
+      "destination": "/appardas-logo.png"
+    },
+    {
+      "source": "/:prefix*/appardas-logo.png",
+      "destination": "/appardas-logo.png"
+    },
+    {
+      "source": "/wireframes/appardas-logo.png",
+      "destination": "/appardas-logo.png"
+    },
+    {
+      "source": "/wireframes/public/:match*",
+      "destination": "/public/:match*"
+    },
+    {
+      "source": "/wireframes/internal/:match*",
+      "destination": "/internal/:match*"
+    },
+    {
+      "source": "/wireframes/index.html",
       "destination": "/index.html"
     },
     {
-      "source": "/public",
-      "destination": "/public/index.html"
-    },
-    {
-      "source": "/public/",
-      "destination": "/public/index.html"
+      "source": "/wireframes",
+      "destination": "/index.html"
     },
     {
       "source": "/services",
+      "destination": "/public/services.html"
+    },
+    {
+      "source": "/services.html",
       "destination": "/public/services.html"
     },
     {
@@ -24,7 +44,15 @@
       "destination": "/public/work.html"
     },
     {
+      "source": "/work.html",
+      "destination": "/public/work.html"
+    },
+    {
       "source": "/about",
+      "destination": "/public/about.html"
+    },
+    {
+      "source": "/about.html",
       "destination": "/public/about.html"
     },
     {
@@ -32,11 +60,23 @@
       "destination": "/public/team.html"
     },
     {
+      "source": "/team.html",
+      "destination": "/public/team.html"
+    },
+    {
       "source": "/contact",
       "destination": "/public/contact.html"
     },
     {
+      "source": "/contact.html",
+      "destination": "/public/contact.html"
+    },
+    {
       "source": "/privacy",
+      "destination": "/public/privacy.html"
+    },
+    {
+      "source": "/privacy.html",
       "destination": "/public/privacy.html"
     },
     {
@@ -52,27 +92,31 @@
       "destination": "/internal/dashboard.html"
     },
     {
-      "source": "/internal/login",
+      "source": "/dashboard",
+      "destination": "/internal/dashboard.html"
+    },
+    {
+      "source": "/login",
       "destination": "/internal/login.html"
     },
     {
-      "source": "/internal/directory",
+      "source": "/directory",
       "destination": "/internal/directory.html"
     },
     {
-      "source": "/internal/ids",
+      "source": "/ids",
       "destination": "/internal/id-manager.html"
     },
     {
-      "source": "/internal/inquiries",
+      "source": "/inquiries",
       "destination": "/internal/inquiries.html"
     },
     {
-      "source": "/internal/settings",
+      "source": "/settings",
       "destination": "/internal/settings.html"
     },
     {
-      "source": "/internal/content",
+      "source": "/content",
       "destination": "/internal/content.html"
     }
   ],

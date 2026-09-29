@@ -1,79 +1,123 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/wireframes/index.html"
+      "source": "/appardas-logo.png",
+      "destination": "/appardas-logo.png"
     },
     {
-      "source": "/public",
-      "destination": "/wireframes/public/index.html"
+      "source": "/:prefix*/appardas-logo.png",
+      "destination": "/appardas-logo.png"
     },
     {
-      "source": "/public/",
-      "destination": "/wireframes/public/index.html"
+      "source": "/wireframes/appardas-logo.png",
+      "destination": "/appardas-logo.png"
+    },
+    {
+      "source": "/wireframes/public/:match*",
+      "destination": "/public/:match*"
+    },
+    {
+      "source": "/wireframes/internal/:match*",
+      "destination": "/internal/:match*"
+    },
+    {
+      "source": "/wireframes/index.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/wireframes",
+      "destination": "/index.html"
     },
     {
       "source": "/services",
-      "destination": "/wireframes/public/services.html"
+      "destination": "/public/services.html"
+    },
+    {
+      "source": "/services.html",
+      "destination": "/public/services.html"
     },
     {
       "source": "/work",
-      "destination": "/wireframes/public/work.html"
+      "destination": "/public/work.html"
+    },
+    {
+      "source": "/work.html",
+      "destination": "/public/work.html"
     },
     {
       "source": "/about",
-      "destination": "/wireframes/public/about.html"
+      "destination": "/public/about.html"
+    },
+    {
+      "source": "/about.html",
+      "destination": "/public/about.html"
     },
     {
       "source": "/team",
-      "destination": "/wireframes/public/team.html"
+      "destination": "/public/team.html"
+    },
+    {
+      "source": "/team.html",
+      "destination": "/public/team.html"
     },
     {
       "source": "/contact",
-      "destination": "/wireframes/public/contact.html"
+      "destination": "/public/contact.html"
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/public/contact.html"
     },
     {
       "source": "/privacy",
-      "destination": "/wireframes/public/privacy.html"
+      "destination": "/public/privacy.html"
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/public/privacy.html"
     },
     {
       "source": "/team/:slug",
-      "destination": "/wireframes/public/staff-profile.html"
+      "destination": "/public/staff-profile.html"
     },
     {
       "source": "/internal",
-      "destination": "/wireframes/internal/dashboard.html"
+      "destination": "/internal/dashboard.html"
     },
     {
       "source": "/internal/",
-      "destination": "/wireframes/internal/dashboard.html"
+      "destination": "/internal/dashboard.html"
     },
     {
-      "source": "/internal/login",
-      "destination": "/wireframes/internal/login.html"
+      "source": "/dashboard",
+      "destination": "/internal/dashboard.html"
     },
     {
-      "source": "/internal/directory",
-      "destination": "/wireframes/internal/directory.html"
+      "source": "/login",
+      "destination": "/internal/login.html"
     },
     {
-      "source": "/internal/ids",
-      "destination": "/wireframes/internal/id-manager.html"
+      "source": "/directory",
+      "destination": "/internal/directory.html"
     },
     {
-      "source": "/internal/inquiries",
-      "destination": "/wireframes/internal/inquiries.html"
+      "source": "/ids",
+      "destination": "/internal/id-manager.html"
     },
     {
-      "source": "/internal/settings",
-      "destination": "/wireframes/internal/settings.html"
+      "source": "/inquiries",
+      "destination": "/internal/inquiries.html"
     },
     {
-      "source": "/internal/content",
-      "destination": "/wireframes/internal/content.html"
+      "source": "/settings",
+      "destination": "/internal/settings.html"
+    },
+    {
+      "source": "/content",
+      "destination": "/internal/content.html"
     }
   ],
   "headers": [

@@ -1,35 +1,250 @@
 <!doctype html>
+<!-- Wireframe gallery — links every wireframe. Static HTML + Tailwind, no JS. Part of appardas website hub. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=wireframes/index.html" />
-  <title>appardas website hub</title>
-  <link rel="icon" href="wireframes/appardas-logo.png" />
-  <script>
-    window.location.replace("wireframes/index.html");
-  </script>
+  <title>appardas website hub — Wireframe Index</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #0c0a09;
-      color: #f5f5f4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    a { color: #d97706; text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; }
+    body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}
+    .font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}
+    /* Scaled, non-interactive live preview */
+    .frame-wrap{position:relative;width:100%;height:230px;overflow:hidden;background:#e7e5e4}
+    .frame-wrap iframe{position:absolute;top:0;left:0;width:1280px;height:920px;border:0;transform:scale(0.25);transform-origin:top left;pointer-events:none}
   </style>
 </head>
-<body>
-  <div>
-    <p style="font-size: 1.5rem; font-weight: bold; text-transform: lowercase; letter-spacing: -0.025em;">appardas</p>
-    <p style="margin-top: 0.5rem; color: #a8a29e; font-size: 0.875rem;">Redirecting to <a href="wireframes/index.html">wireframe index</a>...</p>
-    <p style="margin-top: 0.25rem; color: #78716c; font-size: 0.75rem;">Or open <a href="wireframes/public/index.html">public landing page directly</a></p>
+<body class="bg-stone-100 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-7xl px-6 h-9 flex items-center justify-between">
+      <a href="public/index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:translate-x-0.5 transition-transform">→</span>
+        <span>Open Public Site (index.html)</span>
+      </a>
+      <span class="text-stone-500">appardas website hub</span>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-amber-400 font-semibold flex items-center gap-1.5">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+          <span>Wireframe Index</span>
+        </a>
+        <span class="hidden sm:inline text-stone-500">Static · no JS</span>
+      </div>
+    </div>
   </div>
+
+  <header class="bg-white border-b border-stone-200">
+    <div class="mx-auto max-w-7xl px-6 py-14">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="appardas-logo.png" alt="appardas logo" class="h-10 w-auto object-contain" />
+        <span class="font-display text-2xl font-bold tracking-tight text-stone-900 lowercase">appardas</span>
+      </div>
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">Design deliverables</p>
+      <h1 class="font-display mt-3 text-4xl md:text-5xl font-bold tracking-tight lowercase">appardas website hub</h1>
+      <p class="mt-4 max-w-2xl text-lg text-stone-600">
+        Static HTML + Tailwind wireframes for the two faces of the appardas website hub.
+        Open any page directly. Companion specification:
+        <a href="00-RESEARCH-AND-PLAN.md" class="font-semibold text-amber-700 underline underline-offset-4">00-RESEARCH-AND-PLAN.md</a>.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <span class="rounded-full bg-stone-100 px-3 py-1.5 font-semibold text-stone-600">Flat-modern 2.0</span>
+        <span class="rounded-full bg-stone-100 px-3 py-1.5 font-semibold text-stone-600">Tailwind via CDN</span>
+        <span class="rounded-full bg-stone-100 px-3 py-1.5 font-semibold text-stone-600">Zero JavaScript</span>
+        <span class="rounded-full bg-stone-100 px-3 py-1.5 font-semibold text-stone-600">Privacy-safe staff IDs</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-6 py-14 space-y-16">
+
+    <!-- PUBLIC FACE -->
+    <section>
+      <div class="flex items-center gap-4">
+        <span class="grid place-items-center h-10 w-10 rounded-xl bg-amber-600 text-white font-black">1</span>
+        <div>
+          <h2 class="font-display text-2xl font-bold tracking-tight">Public Face</h2>
+          <p class="text-sm text-stone-500">What prospects, clients, and the public see.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <a href="public/index.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/index.html" title="Landing preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold">Landing / Home</h3>
+              <span class="text-xs text-stone-400">/</span>
+            </div>
+            <p class="mt-1 text-sm text-stone-500">SME digitalization solutions, services, process, SME case studies, team link, CTA.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/services.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/services.html" title="Services preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Services</h3><span class="text-xs text-stone-400">/services</span></div>
+            <p class="mt-1 text-sm text-stone-500">Website Design &amp; Digital Build, Endpoint &amp; ERP Automation, Useful Apps with store links.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/work.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/work.html" title="Work preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Work</h3><span class="text-xs text-stone-400">/work</span></div>
+            <p class="mt-1 text-sm text-stone-500">SME case studies (business_n 01, business_n 02, business_n 03) with metrics.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/team.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/team.html" title="Team preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Team Directory</h3><span class="text-xs text-stone-400">/team</span></div>
+            <p class="mt-1 text-sm text-stone-500">Directory of feline leadership and team cards.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/staff-profile.html" class="group rounded-2xl border border-amber-300 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+          <div class="frame-wrap"><iframe src="public/staff-profile.html" title="Staff profile preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Staff Digital ID ★</h3><span class="text-xs text-stone-400">/team/[slug]</span></div>
+            <p class="mt-1 text-sm text-stone-500">Public-safe profile with privacy annotations.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/about.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/about.html" title="About preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">About</h3><span class="text-xs text-stone-400">/about</span></div>
+            <p class="mt-1 text-sm text-stone-500">Story, feline executive board (Calico cat CEO), values, milestones.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/contact.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/contact.html" title="Contact preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Contact</h3><span class="text-xs text-stone-400">/contact</span></div>
+            <p class="mt-1 text-sm text-stone-500">Inquiry form with consent + honeypot.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="public/privacy.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="public/privacy.html" title="Privacy preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Privacy Notice</h3><span class="text-xs text-stone-400">/privacy</span></div>
+            <p class="mt-1 text-sm text-stone-500">Plain-language data protection notice.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- INTERNAL FACE -->
+    <section>
+      <div class="flex items-center gap-4">
+        <span class="grid place-items-center h-10 w-10 rounded-xl bg-stone-900 text-white font-black">2</span>
+        <div>
+          <h2 class="font-display text-2xl font-bold tracking-tight">Internal Face</h2>
+          <p class="text-sm text-stone-500">Essential-only tooling to operate the hub.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <a href="internal/login.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/login.html" title="Login preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Internal Login</h3><span class="text-xs text-stone-400">/internal/login</span></div>
+            <p class="mt-1 text-sm text-stone-500">BFF auth gateway.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/dashboard.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/dashboard.html" title="Dashboard preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Hub Dashboard</h3><span class="text-xs text-stone-400">/internal</span></div>
+            <p class="mt-1 text-sm text-stone-500">KPIs + module launcher (incl. Ticketing).</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/directory.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/directory.html" title="Directory preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Staff Directory</h3><span class="text-xs text-stone-400">/internal/directory</span></div>
+            <p class="mt-1 text-sm text-stone-500">Internal source of truth for staff.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/id-manager.html" class="group rounded-2xl border border-amber-300 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+          <div class="frame-wrap"><iframe src="internal/id-manager.html" title="Digital ID manager preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Digital ID Manager ★</h3><span class="text-xs text-stone-400">/internal/ids</span></div>
+            <p class="mt-1 text-sm text-stone-500">Consent, field visibility, live preview.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-600 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/content.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/content.html" title="Content preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Content Manager</h3><span class="text-xs text-stone-400">/internal/content</span></div>
+            <p class="mt-1 text-sm text-stone-500">Edit public pages with publish workflow.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/inquiries.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/inquiries.html" title="Inquiries preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Inquiry Inbox</h3><span class="text-xs text-stone-400">/internal/inquiries</span></div>
+            <p class="mt-1 text-sm text-stone-500">Triage and reply to contact submissions.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+        <a href="internal/settings.html" class="group rounded-2xl border border-stone-200 bg-white overflow-hidden shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+          <div class="frame-wrap"><iframe src="internal/settings.html" title="Settings preview" loading="lazy"></iframe></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between"><h3 class="font-display font-bold">Settings</h3><span class="text-xs text-stone-400">/internal/settings</span></div>
+            <p class="mt-1 text-sm text-stone-500">Profile, security, appearance, notifications.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 group-hover:gap-2 transition-all">Open wireframe →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section class="rounded-2xl border border-stone-200 bg-white p-6">
+      <h2 class="font-display text-lg font-bold">How to use these wireframes</h2>
+      <ul class="mt-3 space-y-2 text-sm text-stone-600">
+        <li>• Previews above are live but non-interactive. Click any card to open the full-page wireframe.</li>
+        <li>• All pages are plain static HTML using Tailwind's browser CDN — no build step, no JavaScript.</li>
+        <li>• Placeholder copy, brand names, and metrics are illustrative (see plan §13).</li>
+        <li>• The Ticketing System is already built; the Hub only launches it from the dashboard.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-stone-950 text-stone-400">
+    <div class="mx-auto max-w-7xl px-6 py-10 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <p>© 2026 appardas website hub — wireframes.</p>
+      <a href="00-RESEARCH-AND-PLAN.md" class="hover:text-white">Research &amp; Plan →</a>
+    </div>
+  </footer>
 </body>
 </html>
