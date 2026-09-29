@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- WIREFRAME — Internal Face · Profile & Settings. Route: /internal/settings. Static HTML + Tailwind, no JS. See plan §7.7 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · appardas hub — Settings</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif}.font-display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone-100 text-stone-900 antialiased">
+
+  <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
+    <div class="mx-auto max-w-[1600px] px-6 h-9 flex items-center justify-between">
+      <a href="/" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+        <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
+        <span>Back to Gallery</span>
+      </a>
+      <span class="text-stone-500">Route&nbsp;/internal/settings</span>
+      <div class="flex items-center gap-4">
+        <a href="/public" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Public Site</a>
+        <a href="/" class="text-amber-400 font-semibold flex items-center gap-1.5">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+          <span>Gallery</span>
+        </a>
+        <span class="hidden sm:inline">Profile &amp; Settings</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1600px] flex">
+    <aside class="hidden md:flex w-64 shrink-0 flex-col bg-stone-900 text-stone-300 min-h-screen">
+      <div class="h-16 flex items-center gap-3 px-6 border-b border-white/10">
+        <img src="/static/appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
+        <span class="font-display text-lg font-bold text-white tracking-tight lowercase">appardas <span class="font-normal text-stone-400">hub</span></span>
+      </div>
+      <nav class="flex-1 p-3 space-y-1 text-sm">
+        <a href="/internal/dashboard" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Hub</a>
+        <a href="/internal/content" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
+        <a href="/internal/directory" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Directory</a>
+        <a href="/internal/id-manager" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Digital IDs</a>
+        <a href="/internal/inquiries" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span><span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span></a>
+        <div class="pt-3 mt-3 border-t border-white/10">
+          <p class="px-3 pb-2 text-[10px] font-semibold uppercase tracking-widest text-stone-500">Modules</p>
+          <a href="#" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Ticketing</span><span class="text-stone-500">↗</span></a>
+        </div>
+        <a href="/internal/settings" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white"><span class="h-4 w-4 rounded bg-white/30"></span> Settings</a>
+      </nav>
+      <div class="p-3 border-t border-white/10">
+        <div class="flex items-center gap-3 rounded-xl px-3 py-2">
+          <span class="grid place-items-center h-9 w-9 rounded-full bg-amber-500 text-white text-sm font-bold">SM</span>
+          <div class="min-w-0"><p class="truncate text-sm font-semibold text-white">Sarah Alvarez</p><p class="truncate text-xs text-stone-400">Scrum Master</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="flex-1 min-w-0">
+      <header class="h-16 bg-white border-b border-stone-200 flex items-center justify-between px-6">
+        <div class="flex items-center gap-3">
+          <img src="/static/appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
+          <h1 class="font-display text-lg font-bold">Settings</h1>
+        </div>
+        <span class="grid place-items-center h-9 w-9 rounded-full bg-stone-900 text-white text-sm font-bold">SM</span>
+      </header>
+
+      <main class="p-6 grid gap-6 lg:grid-cols-12">
+        <!-- Settings nav -->
+        <div class="lg:col-span-3">
+          <nav class="rounded-2xl border border-stone-200 bg-white p-2 text-sm">
+            <a href="#profile" class="block rounded-lg bg-amber-50 px-3 py-2 font-semibold text-amber-800">Profile</a>
+            <a href="#security" class="block rounded-lg px-3 py-2 hover:bg-stone-50">Security &amp; password</a>
+            <a href="#appearance" class="block rounded-lg px-3 py-2 hover:bg-stone-50">Appearance</a>
+            <a href="#notifications" class="block rounded-lg px-3 py-2 hover:bg-stone-50">Notifications</a>
+          </nav>
+        </div>
+
+        <div class="lg:col-span-9 space-y-6">
+          <!-- Profile -->
+          <section id="profile" class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h2 class="font-display text-lg font-bold">Profile</h2>
+            <p class="text-sm text-stone-500">This is your internal hub identity. Your public digital ID is managed separately.</p>
+            <div class="mt-5 flex items-center gap-5">
+              <span class="grid place-items-center h-16 w-16 rounded-full bg-amber-100 text-amber-800 font-display text-xl font-bold">SA</span>
+              <div>
+                <button class="rounded-full border border-stone-300 px-4 py-2 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">Upload photo</button>
+                <p class="mt-1 text-xs text-stone-400">PNG or JPG, max 2MB.</p>
+              </div>
+            </div>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="block text-sm font-semibold text-stone-700">Display name</label>
+                <input type="text" value="Sarah Alvarez" class="mt-2 w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-stone-700">Job title</label>
+                <input type="text" value="Lead Engineer" class="mt-2 w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-sm font-semibold text-stone-700">Email (read-only)</label>
+                <input type="email" value="sarah.a@appardas.example" readonly class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-500" />
+              </div>
+            </div>
+            <div class="mt-5"><button class="rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700 transition-colors">Save profile</button></div>
+          </section>
+
+          <!-- Security -->
+          <section id="security" class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h2 class="font-display text-lg font-bold">Security &amp; password</h2>
+            <div class="mt-5 grid gap-5 sm:grid-cols-3">
+              <div>
+                <label class="block text-sm font-semibold text-stone-700">Current password</label>
+                <input type="password" value="········" class="mt-2 w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-stone-700">New password</label>
+                <input type="password" placeholder="••••••••" class="mt-2 w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-stone-700">Confirm new password</label>
+                <input type="password" placeholder="••••••••" class="mt-2 w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm" />
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between rounded-xl bg-stone-50 p-4">
+              <div><p class="text-sm font-semibold">Two-factor authentication</p><p class="text-xs text-stone-500">Recommended for managers and admins.</p></div>
+              <button class="rounded-full border border-stone-300 px-4 py-2 text-sm font-semibold text-stone-700 hover:border-amber-300 hover:text-amber-700 transition-colors">Enable</button>
+            </div>
+            <div class="mt-5"><button class="rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700 transition-colors">Update password</button></div>
+          </section>
+
+          <!-- Appearance -->
+          <section id="appearance" class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h2 class="font-display text-lg font-bold">Appearance</h2>
+            <p class="text-sm text-stone-500">Matches the ticketing module's theme system (light / dark / system).</p>
+            <div class="mt-5 grid gap-4 sm:grid-cols-3">
+              <label class="rounded-xl border-2 border-amber-600 p-4 text-center"><span class="block h-10 rounded-lg bg-white border border-stone-200"></span><span class="mt-2 block text-sm font-semibold">Light</span></label>
+              <label class="rounded-xl border border-stone-200 p-4 text-center"><span class="block h-10 rounded-lg bg-stone-900"></span><span class="mt-2 block text-sm font-semibold">Dark</span></label>
+              <label class="rounded-xl border border-stone-200 p-4 text-center"><span class="block h-10 rounded-lg bg-gradient-to-r from-white to-stone-900 border border-stone-200"></span><span class="mt-2 block text-sm font-semibold">System</span></label>
+            </div>
+          </section>
+
+          <!-- Notifications -->
+          <section id="notifications" class="rounded-2xl border border-stone-200 bg-white p-6">
+            <h2 class="font-display text-lg font-bold">Notifications</h2>
+            <div class="mt-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                <span>New inquiries assigned to me</span>
+                <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500"><span class="ml-auto mr-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+              </div>
+              <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                <span>Profiles awaiting my approval</span>
+                <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500"><span class="ml-auto mr-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+              </div>
+              <div class="flex items-center justify-between rounded-xl border border-stone-200 px-4 py-3">
+                <span>Weekly content digest</span>
+                <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-stone-300"><span class="mr-auto ml-0.5 h-5 w-5 rounded-full bg-white"></span></span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

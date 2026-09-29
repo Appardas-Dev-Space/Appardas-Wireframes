@@ -1,5 +1,5 @@
 """
-appardas wireframe gallery & website hub — Vercel Serverless & Local Application
+appardas wireframe gallery & website hub — Lightweight Flask Application
 Static HTML + Tailwind wireframes served with clean absolute routing.
 Zero JavaScript required.
 """
@@ -48,36 +48,36 @@ def gallery():
 @app.route("/public")
 @app.route("/sme")
 def public_home():
-    return render_template("public/index.html")
+    return render_template("sme.html")
 
 @app.route("/services")
 def services():
-    return render_template("public/services.html")
+    return render_template("services.html")
 
 @app.route("/work")
 def work():
-    return render_template("public/work.html")
+    return render_template("work.html")
 
 @app.route("/about")
 def about():
-    return render_template("public/about.html")
+    return render_template("about.html")
 
 @app.route("/team")
 def team():
-    return render_template("public/team.html")
+    return render_template("team.html")
 
 @app.route("/contact")
 def contact():
-    return render_template("public/contact.html")
+    return render_template("contact.html")
 
 @app.route("/privacy")
 def privacy():
-    return render_template("public/privacy.html")
+    return render_template("privacy.html")
 
 @app.route("/staff-profile")
 @app.route("/team/<slug>")
 def staff_profile(slug=None):
-    return render_template("public/staff-profile.html")
+    return render_template("staff-profile.html")
 
 
 # --------------------------------------------------------------------------
@@ -87,38 +87,38 @@ def staff_profile(slug=None):
 @app.route("/internal/dashboard")
 @app.route("/dashboard")
 def dashboard():
-    return render_template("internal/dashboard.html")
+    return render_template("dashboard.html")
 
 @app.route("/internal/content")
 @app.route("/content")
 def content():
-    return render_template("internal/content.html")
+    return render_template("content.html")
 
 @app.route("/internal/directory")
 @app.route("/directory")
 def directory():
-    return render_template("internal/directory.html")
+    return render_template("directory.html")
 
 @app.route("/internal/id-manager")
 @app.route("/internal/ids")
 @app.route("/ids")
 def id_manager():
-    return render_template("internal/id-manager.html")
+    return render_template("id-manager.html")
 
 @app.route("/internal/inquiries")
 @app.route("/inquiries")
 def inquiries():
-    return render_template("internal/inquiries.html")
+    return render_template("inquiries.html")
 
 @app.route("/internal/login")
 @app.route("/login")
 def login():
-    return render_template("internal/login.html")
+    return render_template("login.html")
 
 @app.route("/internal/settings")
 @app.route("/settings")
 def settings():
-    return render_template("internal/settings.html")
+    return render_template("settings.html")
 
 
 # --------------------------------------------------------------------------
@@ -147,7 +147,7 @@ def debug():
         "base_dir": BASE_DIR,
         "template_folder": app.template_folder,
         "template_folder_exists": os.path.exists(app.template_folder),
-        "templates_found": [os.path.relpath(p, app.template_folder) for p in glob.glob(os.path.join(app.template_folder, "**/*"), recursive=True) if os.path.isfile(p)] if os.path.exists(app.template_folder) else []
+        "templates_found": sorted([os.path.relpath(p, app.template_folder) for p in glob.glob(os.path.join(app.template_folder, "**/*"), recursive=True) if os.path.isfile(p)]) if os.path.exists(app.template_folder) else []
     }
 
 @app.route("/<page>.html")
@@ -176,8 +176,8 @@ def html_redirect(page):
 
 @app.route("/public/<page>")
 def public_subpath(page):
-    name = page[:-5] if page.endswith(".html") else page
-    if name in ["index", ""]:
+    name = page.replace(".html", "")
+    if name in ["index", "sme", ""]:
         return redirect("/public")
     return redirect(f"/{name}")
 
