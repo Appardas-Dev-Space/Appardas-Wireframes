@@ -15,14 +15,14 @@
 
   <div class="bg-stone-900 text-stone-300 text-[11px] tracking-[0.2em] uppercase">
     <div class="mx-auto max-w-[1600px] px-6 h-9 flex items-center justify-between">
-      <a href="../index.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
+      <a href="/" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-amber-400 transition-colors font-medium group">
         <span class="text-amber-500 font-bold group-hover:-translate-x-0.5 transition-transform">←</span>
         <span>Back to Gallery</span>
       </a>
       <span class="text-stone-500">Route&nbsp;/internal/directory</span>
       <div class="flex items-center gap-4">
-        <a href="../public/index.html" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Public Site</a>
-        <a href="../index.html" class="text-amber-400 font-semibold flex items-center gap-1.5">
+        <a href="/public" class="hover:text-amber-400 text-stone-400 transition-colors hidden sm:inline">Public Site</a>
+        <a href="/" class="text-amber-400 font-semibold flex items-center gap-1.5">
           <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
           <span>Gallery</span>
         </a>
@@ -35,20 +35,20 @@
     <!-- Sidebar -->
     <aside class="hidden md:flex w-64 shrink-0 flex-col bg-stone-900 text-stone-300 min-h-screen">
       <div class="h-16 flex items-center gap-3 px-6 border-b border-white/10">
-        <img src="../appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
+        <img src="/static/appardas-logo.png" alt="appardas logo" class="h-7 w-auto object-contain brightness-110" />
         <span class="font-display text-lg font-bold text-white tracking-tight lowercase">appardas <span class="font-normal text-stone-400">hub</span></span>
       </div>
       <nav class="flex-1 p-3 space-y-1 text-sm">
-        <a href="dashboard.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Hub</a>
-        <a href="content.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
-        <a href="directory.html" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white"><span class="h-4 w-4 rounded bg-white/30"></span> Directory</a>
-        <a href="id-manager.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Digital IDs</a>
-        <a href="inquiries.html" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span><span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span></a>
+        <a href="/internal/dashboard" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Hub</a>
+        <a href="/internal/content" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Content</a>
+        <a href="/internal/directory" class="flex items-center gap-3 rounded-xl bg-amber-600 px-3 py-2.5 font-semibold text-white"><span class="h-4 w-4 rounded bg-white/30"></span> Directory</a>
+        <a href="/internal/id-manager" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Digital IDs</a>
+        <a href="/internal/inquiries" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Inquiries</span><span class="rounded-full bg-amber-400 px-2 py-0.5 text-[10px] font-bold text-stone-900">3</span></a>
         <div class="pt-3 mt-3 border-t border-white/10">
           <p class="px-3 pb-2 text-[10px] font-semibold uppercase tracking-widest text-stone-500">Modules</p>
           <a href="#" class="flex items-center justify-between rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="flex items-center gap-3"><span class="h-4 w-4 rounded bg-white/20"></span> Ticketing</span><span class="text-stone-500">↗</span></a>
         </div>
-        <a href="settings.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Settings</a>
+        <a href="/internal/settings" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition-colors"><span class="h-4 w-4 rounded bg-white/20"></span> Settings</a>
       </nav>
       <div class="p-3 border-t border-white/10">
         <div class="flex items-center gap-3 rounded-xl px-3 py-2">
@@ -61,7 +61,7 @@
     <div class="flex-1 min-w-0">
       <header class="h-16 bg-white border-b border-stone-200 flex items-center justify-between px-6">
         <div class="flex items-center gap-3">
-          <img src="../appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
+          <img src="/static/appardas-logo.png" alt="appardas logo" class="md:hidden h-8 w-auto object-contain" />
           <h1 class="font-display text-lg font-bold">Staff Directory</h1>
         </div>
         <div class="flex items-center gap-3">
@@ -103,7 +103,7 @@
                 <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Platform</td>
                 <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Published</span></td>
                 <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">2 days ago</td>
-                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+                <td class="px-5 py-4 text-right"><a href="/internal/id-manager" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
               </tr>
               <tr class="hover:bg-stone-50/60">
                 <td class="px-5 py-4">
@@ -116,7 +116,7 @@
                 <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Design</td>
                 <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700"><span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span> Pending consent</span></td>
                 <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">5 days ago</td>
-                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+                <td class="px-5 py-4 text-right"><a href="/internal/id-manager" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
               </tr>
               <tr class="hover:bg-stone-50/60">
                 <td class="px-5 py-4">
@@ -129,7 +129,7 @@
                 <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Engineering</td>
                 <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Published</span></td>
                 <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">1 week ago</td>
-                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+                <td class="px-5 py-4 text-right"><a href="/internal/id-manager" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
               </tr>
               <tr class="hover:bg-stone-50/60">
                 <td class="px-5 py-4">
@@ -142,7 +142,7 @@
                 <td class="px-5 py-4 text-stone-600 hidden lg:table-cell">Delivery</td>
                 <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-2.5 py-1 text-xs font-semibold text-stone-600"><span class="h-1.5 w-1.5 rounded-full bg-stone-400"></span> Draft</span></td>
                 <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">3 days ago</td>
-                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+                <td class="px-5 py-4 text-right"><a href="/internal/id-manager" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
               </tr>
               <tr class="hover:bg-stone-50/60">
                 <td class="px-5 py-4">
@@ -155,7 +155,7 @@
                 <td class="px-5 py-4 text-stone-500 hidden lg:table-cell">Engineering</td>
                 <td class="px-5 py-4"><span class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-2.5 py-1 text-xs font-semibold text-stone-500"><span class="h-1.5 w-1.5 rounded-full bg-stone-400"></span> Retired</span></td>
                 <td class="px-5 py-4 text-stone-500 hidden xl:table-cell">2 months ago</td>
-                <td class="px-5 py-4 text-right"><a href="id-manager.html" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
+                <td class="px-5 py-4 text-right"><a href="/internal/id-manager" class="font-semibold text-amber-700 hover:text-amber-800">Manage</a></td>
               </tr>
             </tbody>
           </table>
@@ -174,7 +174,7 @@
         <div class="rounded-2xl border border-dashed border-stone-300 bg-white p-5 text-xs text-stone-500">
           <span class="font-semibold text-stone-600">Internal-only data.</span> This table may show legal name, work contact,
           employment dates, manager, and internal IDs. It is never exposed publicly — public output is controlled per field in
-          <a href="id-manager.html" class="font-semibold text-amber-700">Digital IDs</a>.
+          <a href="/internal/id-manager" class="font-semibold text-amber-700">Digital IDs</a>.
         </div>
       </main>
     </div>
